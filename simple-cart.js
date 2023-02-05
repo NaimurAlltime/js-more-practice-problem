@@ -27,9 +27,28 @@ function totalQuantity(products){
         const product = products[i];
         // console.log(product);
         quantitySum += product.quantity;
+
+
     }
     return quantitySum;
 }
 
 const sumOfQuantity = totalQuantity(shoppingCart);
 console.log("Today total quantity is: ", sumOfQuantity);
+
+
+// find final total cost
+function totalQuantityCost(products){
+    let totalCostOfShopping = 0;
+    for(let i = 0; i < products.length; i++){
+        const product = products[i];
+        const productTotal = product.price * product.quantity;
+        // console.log(productTotal);
+        totalCostOfShopping += productTotal;
+
+    }
+    return totalCostOfShopping;
+}
+
+const sumOfQuantityCost = totalQuantityCost(shoppingCart);
+console.log("Today total quantity Cost is: ", sumOfQuantityCost);
